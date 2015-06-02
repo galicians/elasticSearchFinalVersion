@@ -1,0 +1,37 @@
+<div class="search">
+  <div class="signal-logo">
+    <span class="signal-font"> signal </span>
+  </div>
+  <div class="search-bar">
+       <form role="search" ng-submit="search()">
+            <input type="search" ng-model="searchTerm" placeholder="Search">
+            <button class="search-for-keyw" type="submit" id="search-button"> 
+              <span> Search for keywords </span>
+            </button>
+        </form>
+  </div>
+</div>
+
+<div class="main">
+  <ul ng-repeat="url in urls | orderBy:'rankpage'" ng-cloak>
+    <h3 class="source"> {{url.url}} </h3>
+    <h3 class="google-rank">GoogleRank: {{url.rankpage}} for {{url.keywords}}</h3>
+    <li class="words-list header">
+        <p class="word-header">word</p>
+    </li>
+    <li class="count-list header">
+      <p class="count-header">count</p>
+    </li>
+    <li class="words-list">
+      <p class="specific-word" ng-repeat="word in url.words">{{word.word}}</p>
+    </li>
+    <li class="count-list">
+      <p class="specific-word" ng-repeat="word in url.words">{{word.count}}</p>
+    </li>
+    <button class="click-to-visit"> 
+      <a href="{{url.url}}">
+        <span> Visit Site </span>
+      </a>
+    </button>
+  </ul>
+</div>
