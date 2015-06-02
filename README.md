@@ -30,7 +30,6 @@
 ## CSS styling:
     - Mobile first responsive design, then tablets and then desktop
     - Tested on major browsers
-    - Still pending issues with word count, clearly room from improvement
 
 ##Resources to eleborate structure:
     - http://www.johnpapa.net/angular-app-structuring-guidelines/
